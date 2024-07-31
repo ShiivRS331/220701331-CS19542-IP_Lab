@@ -27,6 +27,7 @@ li{
 
 .sidebar a {
     display: block;
+    color: purple;
     padding: 10px;
     margin-bottom: 10px;
     transition: background-color 0.3s;
