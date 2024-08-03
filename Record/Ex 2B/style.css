@@ -1,6 +1,8 @@
 .heading{
     background-color: purple;
     color: whitesmoke;
+    background: linear-gradient(to right, rgb(51, 2, 56), rgb(90, 2, 99),rgb(51, 2, 56));
+
 }
 
 .container {
@@ -20,7 +22,7 @@
     margin-left: 300px;
 }
 li{
-    display: block;
+    /* display: block; */
     padding: 10px;
     margin-bottom: 8px;
 }
