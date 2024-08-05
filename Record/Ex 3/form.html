@@ -1,204 +1,134 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>College Registration Form</title>
-    <style>
-        .error {
-            color: red;
-            font-size: 12px;
-        }
-    </style>
+
 </head>
 <body>
-    <form name="registrationForm" onsubmit="return validateForm()">
-        <label for="reg_no">Reg No:</label>
-        <input type="text" id="reg_no" name="reg_no" required>
-        <span id="regNoError" class="error"></span><br>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <span id="nameError" class="error"></span>
+    <h1>College Registration Form</h1>
+    <form id="registrationForm">
+        <div>
+            <label for="regNo">Reg No.:</label>
+            <input type="text" id="regNo" name="regNo" required>
+        </div>
         <br>
-        <label for="year">Year:</label>
-        <select id="year" name="year" required>
-            <option value="">Select Year</option>
-            <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
-            <option value="3">3rd Year</option>
-            <option value="4">4th Year</option>
-        </select>
-        <br>
-        <span id="yearError" class="error"></span>
-        <br>
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="male" required> Male
-        <input type="radio" id="female" name="gender" value="female" required> Female
-        <span id="genderError" class="error"></span>
-        <br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-        <span id="ageError" class="error"></span><br>
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
-        <span id="dobError" class="error"></span><br>
-        <label for="semester">Semester:</label>
-        <select id="semester" name="semester" required>
-            <option value="">Select Semester</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-          </select>
-          <span id="semesterError" class="error"></span><br>
-        <label for="academic_year">Academic Year:</label>
-        <input type="text" id="academic_year" name="academic_year" required>
-        <span id="academicYearError" class="error"></span><br>
-        <label for="subject_code">Subject Code:</label>
-        <input type="text" id="subject_code" name="subject_code" required>
-        <span id="subjectCodeError" class="error"></span><br>
-        <label for="subject_name">Subject Name:</label>
-        <input type="text" id="subject_name" name="subject_name" required>
-        <span id="subjectNameError" class="error"></span><br>
-        <label for="credits">Credits:</label>
-        <input type="number" id="credits" name="credits" required>
-        <span id="creditsError" class="error"></span><br>
-        <label for="type">Type:</label>
-        <select id="type" name="type" required>
-            <option value="">Select Type</option>
-            <option value="core">Core</option>
-            <option value="pe">PE</option>
-            <option value="oe">OE</option>
-        </select>
-        <span id="typeError" class="error"></span><br>
 
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Select Year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div>
+        <br>
+
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required	>
+        </div>
+        <br>
+
+        <div>
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="" disabled selected>Select Semester</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="academicYear">Academic Year:</label>
+            <input type="text" id="academicYear" name="academicYear" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="subjectCode">Subject Code:</label>
+            <input type="text" id="subjectCode" name="subjectCode" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="subjectTitle">Subject Title:</label>
+            <input type="text" id="subjectTitle" name="subjectTitle" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="credits">Credits:</label>
+            <input type="number" id="credits" name="credits" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="subjectType">Subject Type:</label>
+            <select id="subjectType" name="subjectType" required>
+                <option value="" disabled selected>Select Subject Type</option>
+                <option value="Core">Core</option>
+                <option value="PE">PE</option>
+                <option value="OE">OE</option>
+            </select>
+        </div>
+        <br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
 
-    <script src="app.js">
-        function validateForm() {
-    // Get form elements
-    const regNo = document.getElementById("reg_no").value;
-    const name = document.getElementById("name").value;
-    const year = document.getElementById("year").value;
-    const gender = document.querySelector('input[name="gender"]:checked').value;
-    const age = document.getElementById("age").value;
-    const dob = document.getElementById("dob").value;
-    const semester = document.getElementById("semester").value;
-    const academicYear = document.getElementById("academic_year").value;
-    const subjectCode = document.getElementById("subject_code").value;
-    const subjectName = document.getElementById("subject_name").value;
-    const credits = document.getElementById("credits").value;
-    const type = document.getElementById("type").value;
-  
-    // Error messages
-    const regNoError = document.getElementById("regNoError");
-    const nameError = document.getElementById("nameError");
-    const yearError = document.getElementById("yearError");
-    const genderError = document.getElementById("genderError");
-    const ageError = document.getElementById("ageError");
-    const dobError = document.getElementById("dobError");
-    const semesterError = document.getElementById("semesterError");
-    const academicYearError = document.getElementById("academicYearError");
-    const subjectCodeError = document.getElementById("subjectCodeError");
-    const subjectNameError = document.getElementById("subjectNameError");
-    const creditsError = document.getElementById("creditsError");
-    const typeError = document.getElementById("typeError");
-  
-    let isValid = true;
-  
-    // Reg No validation
-    if (!/^\d{9}$/.test(regNo)) {
-      regNoError.textContent = "Reg No must be 9 digits";
-      isValid = false;
-    } else {
-      regNoError.textContent = "";
-    }
-  
-    // Name validation
-    if (name === "") {
-      nameError.textContent = "Name is required";
-      isValid = false;
-    } else {
-      nameError.textContent = "";
-    }
-  
-    // Year validation
-    if (year === "") {
-      yearError.textContent = "Year is required";
-      isValid = false;
-    } else {
-      yearError.textContent = "";
-    }
-  
-    // Gender validation
-    if (gender === undefined) {
-      genderError.textContent = "Gender is required";
-      isValid = false;
-    } else {
-      genderError.textContent = "";
-    }
-  
-    // Age validation
-    if (isNaN(age) || age <= 0) {
-      ageError.textContent = "Age must be a positive number";
-      isValid = false;
-    } else {
-      ageError.textContent = "";
-    }
-  
-    // DOB validation
-    // Add your DOB validation logic here
-  
-    // Semester validation
-    if (semester === "") {
-      semesterError.textContent = "Semester is required";
-      isValid = false;
-    } else {
-      semesterError.textContent = "";
-    }
-  
-    // Academic Year validation
-    // Add your academic year validation logic here
-  
-    // Subject Code validation
-    if (!/^[A-Z]{2}\d{5}$/.test(subjectCode)) {
-      subjectCodeError.textContent = "Subject Code must be in format AA12345";
-      isValid = false;
-    } else {
-      subjectCodeError.textContent = "";
-    }
-  
-    // Subject Name validation
-    if (subjectName === "") {
-      subjectNameError.textContent = "Subject Name is required";
-      isValid = false;
-    } else {
-      subjectNameError.textContent = "";
-    }
-  
-    // Credits validation
-    if (isNaN(credits) || credits <= 0) {
-      creditsError.textContent = "Credits must be a positive number";
-      isValid = false;
-    } else {
-      creditsError.textContent = "";
-    }
-  
-    // Type validation
-    if (type === "") {
-      typeError.textContent = "Type is required";
-      isValid = false;
-    } else {
-      typeError.textContent = "";
-    }
-  
-    return isValid;
-  }
-  
+    <script>
+	        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            const regNo = document.getElementById('regNo').value;
+            const subjectCode = document.getElementById('subjectCode').value;
+
+            const regNoPattern = /^\d{9}$/;
+            const subjectCodePattern = /^[A-Za-z]{2}\d{5}$/;
+
+            if (!regNoPattern.test(regNo)) {
+                alert('Registration number must be a 9-digit number.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!subjectCodePattern.test(subjectCode)) {
+                alert('Subject Code must be 7 characters long, with the first 2 characters as letters followed by 5 numbers.');
+                event.preventDefault();
+                return;
+            }
+
+            // If both checks pass
+            alert('Form submitted successfully!');
+        });
     </script>
 </body>
 </html>
