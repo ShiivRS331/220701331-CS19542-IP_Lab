@@ -15,7 +15,7 @@ h1 {
 }
 
 form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -191,13 +191,13 @@ button:hover {
             const subjectCodePattern = /^[A-Za-z]{2}\d{5}$/;
 
             if (!regNoPattern.test(regNo)) {
-                alert('Registration number must be a 9-digit number.');
+                window.alert('Registration number must be a 9-digit number.');
                 event.preventDefault();
                 return;
             }
 
             if (!subjectCodePattern.test(subjectCode)) {
-                alert('Subject Code must be 7 characters long, with the first 2 characters as letters followed by 5 numbers.');
+                window.alert('Subject Code must be 7 characters long, with the first 2 characters as letters followed by 5 numbers.');
                 event.preventDefault();
                 return;
             }
