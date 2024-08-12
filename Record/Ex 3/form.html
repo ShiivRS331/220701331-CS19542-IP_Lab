@@ -121,12 +121,14 @@
     if (!regNoPattern.test(regNo)) {
         document.getElementById("regerror").innerHTML='Registration number must be a 9-digit number.';
         event.preventDefault();  //used to prevent default action to occur in the browser (eg: default it reloads the page but using this i can prevent that )
-        return;
+        document.getElementById("regNo").focus();
+	return;
     }
 
     if (!subjectCodePattern.test(subjectCode)) {
         document.getElementById("codeError").innerHTML='Subject Code must be 7 characters long, with the first 2 characters as letters followed by 5 numbers.';
         event.preventDefault();
+	document.getElementById("subjectCode").focus();
         return;
     }
 
