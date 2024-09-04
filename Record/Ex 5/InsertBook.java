@@ -19,7 +19,7 @@ public class InsertBook extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String URL="jdbc:mysql://localhost:3306/library";
+			String URL="jdbc:mysql://localhost:3307/Library";
 			Connection conn = DriverManager.getConnection(URL,"root","");
 			PreparedStatement ps = conn.prepareStatement("insert into books values(?,?,?,?,?,?,?)");
 			String b_id = request.getParameter("bid");
