@@ -20,7 +20,7 @@ public class DeleteBook extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String URL="jdbc:mysql://localhost:3306/library";
+			String URL="jdbc:mysql://localhost:3307/Library";
 			Connection conn = DriverManager.getConnection(URL,"root","");
 			PreparedStatement ps = conn.prepareStatement("delete from books where book_name=?");
 			String b_name = request.getParameter("bname");
