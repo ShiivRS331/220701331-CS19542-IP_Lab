@@ -17,7 +17,7 @@ public class AllBooks extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/library";
+			String url = "jdbc:mysql://localhost:3307/Library";
 			Connection conn = DriverManager.getConnection(url,"root","");
 			PreparedStatement ps = conn.prepareStatement("select * from books;");
 			ResultSet rs = ps.executeQuery();
